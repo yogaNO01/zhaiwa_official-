@@ -1,0 +1,9 @@
+body,html{
+  margin: 0 ;
+  padding: 0;
+}
+
+@font-face {
+  font-family: '迷你简菱心';
+  src: url('/font/迷你简菱心.ttf') format('truetype');
+}

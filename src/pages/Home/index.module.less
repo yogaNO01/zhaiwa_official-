@@ -1,0 +1,50 @@
+.home {
+  background: #eeefef;
+}
+
+.header_wrapper {
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(3, 50, 93, 0.1);
+  .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 1440px;
+    margin: 0 auto;
+    .logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .logo_img {
+        height: 36px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+:global(.ant-anchor-wrapper-horizontal::before) {
+  position: inherit !important;
+}
+
+:global(.ant-anchor-link-title) {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #414040 !important;
+  font-family: Source Han Sans CN-Regular, Source Han Sans CN !important;
+  margin-right: 20px;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+:global(.ant-anchor .ant-anchor-ink) {
+  background-color: transparent !important;
+}
+
+:global(.ant-anchor-link-title-active) {
+  background: #fff !important;
+  box-sizing: border-box;
+  color: #0b58aa !important;
+  border-bottom: 2px solid #0b58aa !important;
+}

@@ -1,0 +1,59 @@
+.news {
+  width: 1200px;
+  margin: 0 auto;
+  .news_list {
+    display: flex;
+    justify-content: space-between;
+    .news_item {
+      width: 370px;
+      height: 504px;
+      background: linear-gradient(128deg, #e6e7ed 0%, #f7f8fa 100%),
+        linear-gradient(147deg, #eeefef 0%, #eeefef 100%);
+      box-shadow: 4px 3px 17px 0px #d7d7d7, -7px -7px 15px 0px #fafbfc,
+        inset 1px 1px 15px 0px #e9eaf2, inset -1px -1px 15px 0px #f5f6fa;
+      .news_item_img {
+        width: 100%;
+      }
+      .news_name {
+        font-family: PingFangSC, PingFang SC;
+        font-weight: 500;
+        font-size: 24px;
+        color: #333333;
+        line-height: 36px;
+        text-align: left;
+        font-style: normal;
+        padding: 0 20px;
+      }
+      .news_item_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        .news_item_time {
+          font-family: PingFangSC, PingFang SC;
+          font-weight: 400;
+          font-size: 18px;
+          color: rgba(51, 51, 51, 0.5);
+          line-height: 32px;
+          text-align: left;
+          font-style: normal;
+        }
+        .news_item_more {
+          font-family: PingFangSC, PingFang SC;
+          font-weight: 400;
+          font-size: 18px;
+          color: #31354b;
+          line-height: 25px;
+          text-align: center;
+          font-style: normal;
+        }
+      }
+    }
+  }
+  .news_pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
