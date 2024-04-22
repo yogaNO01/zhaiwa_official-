@@ -9,14 +9,26 @@ const list = [
   {
     date: '02/29',
     content: '寨娃科技荣获金寨县爱心企业',
+    img: new URL(
+      '@/assets/images/publicWelfare/public_welfare1.png',
+      import.meta.url
+    ).href,
   },
   {
     date: '02/29',
     content: '我们每一瓶的的收入都将为更美好的生活助力',
+    img: new URL(
+      '@/assets/images/publicWelfare/public_welfare2.png',
+      import.meta.url
+    ).href,
   },
   {
     date: '02/29',
     content: '慈善是我们一辈子矢志不移的选择',
+    img: new URL(
+      '@/assets/images/publicWelfare/public_welfare3.png',
+      import.meta.url
+    ).href,
   },
   {
     date: '02/29',
@@ -60,6 +72,31 @@ function PublicWelfare() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className={styles.content_bottom}>
+        {list.slice(0, 3).map((item, index) => (
+          <div
+            key={index}
+            className={styles.content_bottom_item}>
+            <img
+              className={styles.content_bottom_item_img}
+              src={item.img}
+            />
+            <div className={styles.content_bottom_item_content_text}>
+              {item.content}
+            </div>
+            <div className={styles.content_bottom_item_content}>
+              <div className={styles.content_bottom_item_content_date}>
+                {item.date}
+              </div>
+              <img
+                className={styles.content_bottom_item_content_arrow}
+                src={Arrow}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

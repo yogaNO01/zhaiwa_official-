@@ -69,7 +69,7 @@ function Product1() {
         subTitle="ADVANTAGE"
       />
 
-      <div style={{ marginBottom: '141px' }}>
+      <div style={{ marginBottom: '140px' }}>
         <Article
           imgDirection="left"
           imgSrc={productArticleImg1}

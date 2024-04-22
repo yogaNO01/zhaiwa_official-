@@ -65,12 +65,12 @@ function Home() {
         <Product2 />
       </div>
 
-      <div id="custom">
-        <Custom />
-      </div>
-
       <div id="public_welfare">
         <PublicWelfare />
+      </div>
+
+      <div id="custom">
+        <Custom />
       </div>
 
       <Cooperation />
