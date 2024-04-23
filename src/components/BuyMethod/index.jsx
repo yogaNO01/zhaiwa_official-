@@ -39,6 +39,41 @@ function BuyMethod() {
     setList([...list]);
   };
 
+  const BoxItem = (item) => {
+    return (
+      <>
+        <div className={styles.content_case_item}>
+          <img
+            loading="lazy"
+            className={styles.content_case_img}
+            src={item.img}
+          />
+          <div className={styles.content_case_item_name}>{item.name}</div>
+
+          <div className={styles.content_case_item_btn}>
+            <span>{item.btnText}</span>
+            <div className={styles.operation}>
+              <img
+                src={minusIcon}
+                alt="减少"
+                onClick={() => handleCalculate(item, 'minus')}
+              />
+              <span>{item.num}</span>
+              <img
+                src={addIcon}
+                alt="增加"
+                onClick={() => handleCalculate(item, 'add')}
+              />
+              <span>箱</span>
+            </div>
+          </div>
+
+          <div className={styles.content_case_item_more}>查看更多</div>
+        </div>
+      </>
+    );
+  };
+
   return (
     <div className={styles.content_case_box}>
       <Title
@@ -50,60 +85,38 @@ function BuyMethod() {
 
       {list && list.length ? (
         <div className={styles.content_case_container}>
-          <Carousel
-            autoplay
-            afterChange={handleCarouselChange}>
-            {[1, 2, 3].map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={styles.content_case_wrapper}>
-                  <Row gutter={[20, 20]}>
-                    {list.map((item, index) => {
-                      return (
-                        <Col
-                          span={8}
-                          key={index}>
-                          <div className={styles.content_case_item}>
-                            <img
-                              loading="lazy"
-                              className={styles.content_case_img}
-                              src={item.img}
-                            />
-                            <div className={styles.content_case_item_name}>
-                              {item.name}
-                            </div>
-
-                            <div className={styles.content_case_item_btn}>
-                              <span>{item.btnText}</span>
-                              <div className={styles.operation}>
-                                <img
-                                  src={minusIcon}
-                                  alt="减少"
-                                  onClick={() => handleCalculate(item, 'minus')}
-                                />
-                                <span>{item.num}</span>
-                                <img
-                                  src={addIcon}
-                                  alt="增加"
-                                  onClick={() => handleCalculate(item, 'add')}
-                                />
-                                <span>箱</span>
-                              </div>
-                            </div>
-
-                            <div className={styles.content_case_item_more}>
-                              查看更多
-                            </div>
-                          </div>
-                        </Col>
-                      );
-                    })}
-                  </Row>
-                </div>
-              );
-            })}
-          </Carousel>
+          <div className={styles.web}>
+            <Carousel
+              autoplay
+              afterChange={handleCarouselChange}>
+              {[1, 2, 3].map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={styles.content_case_wrapper}>
+                    <Row gutter={[20, 20]}>
+                      {list.map((item, index) => {
+                        return (
+                          <Col
+                            span={8}
+                            key={index}>
+                            {BoxItem(item)}
+                          </Col>
+                        );
+                      })}
+                    </Row>
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
+          <div className={styles.wap}>
+            <div className={styles.content_case_wrapper}>
+              {list.map((item, index) => {
+                return <div key={index}>{BoxItem(item)}</div>;
+              })}
+            </div>
+          </div>
         </div>
       ) : null}
     </div>

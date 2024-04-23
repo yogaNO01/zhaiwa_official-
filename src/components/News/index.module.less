@@ -57,3 +57,25 @@
     margin-top: 50px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .news {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    .news_list {
+      flex-direction: column;
+      .news_item {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .news_name {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
