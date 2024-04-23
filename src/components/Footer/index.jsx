@@ -4,13 +4,6 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.footer_banner}>
-        <img
-          src={
-            new URL('@/assets/images/footer/banner.png', import.meta.url).href
-          }
-          alt="banner"
-        />
-
         <div className={styles.footer_banner_wrapper}>
           <div className={styles.footer_banner_title}>
             居长寿之乡，做极致好水！

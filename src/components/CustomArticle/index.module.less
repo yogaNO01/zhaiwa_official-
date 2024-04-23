@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   .custom_article_img {
-    width: 784px !important;
-    height: 548px !important;
+    width: 784px;
+    height: 548px;
   }
   .custom_article_content {
     width: 667px;
@@ -18,5 +18,23 @@
     letter-spacing: 1px;
     text-align: justify;
     font-style: normal;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom_article_box {
+    display: flex;
+    flex-direction: column;
+    .custom_article_img {
+      width: 100% !important;
+      height: 284.93px !important;
+    }
+    .custom_article_content {
+      font-size: 12px;
+      line-height: 26px;
+      width: 100%;
+      padding: 20px !important;
+      box-sizing: border-box;
+    }
   }
 }

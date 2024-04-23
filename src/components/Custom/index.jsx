@@ -38,6 +38,7 @@ const boxList = [
   },
   {
     path: 'bottom',
+    wapHide: true,
   },
   {
     name: '在线咨询',
@@ -46,6 +47,11 @@ const boxList = [
   },
   {
     path: 'top',
+    wapHide: true,
+  },
+  {
+    path: 'bottom',
+    webHide: true,
   },
   {
     name: '在线咨询',
@@ -92,9 +98,7 @@ function Custom() {
         subTitle="BENEFITS OF CUSTOMIZ"
       />
 
-      <div className={styles.content_flow_content}>
-        <img src={flowImg} />
-      </div>
+      <div className={styles.content_flow_content}></div>
 
       <Title
         title="定制水的流程"
@@ -105,18 +109,35 @@ function Custom() {
         {boxList.map((item, index) => {
           return (
             <>
-              {item.path === 'top' && (
-                <img
-                  className={styles.content_flow_path_top}
-                  src={pathImg}
-                />
-              )}
-              {item.path === 'bottom' && (
-                <img
-                  className={styles.content_flow_path_bottom}
-                  src={pathImg}
-                />
-              )}
+              <div className={styles.web}>
+                {item.path === 'top' && !item.webHide && (
+                  <img
+                    className={styles.content_flow_path_top}
+                    src={pathImg}
+                  />
+                )}
+                {item.path === 'bottom' && !item.webHide && (
+                  <img
+                    className={styles.content_flow_path_bottom}
+                    src={pathImg}
+                  />
+                )}
+              </div>
+
+              <div className={styles.wap}>
+                {item.path === 'top' && !item.wapHide && (
+                  <img
+                    className={styles.content_flow_path_top}
+                    src={pathImg}
+                  />
+                )}
+                {item.path === 'bottom' && !item.wapHide && (
+                  <img
+                    className={styles.content_flow_path_bottom}
+                    src={pathImg}
+                  />
+                )}
+              </div>
 
               {!item.path && (
                 <div

@@ -34,6 +34,12 @@
   .content_case_container {
     width: 1200px;
     margin: 0 auto;
+    .web {
+      display: block;
+    }
+    .wap {
+      display: none;
+    }
     .content_case_wrapper {
       padding-bottom: 100px;
       .content_case_item {
@@ -105,6 +111,42 @@
           justify-content: center;
           cursor: pointer;
           margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content_case_box {
+    padding: 20px 0;
+
+    .content_cast_title {
+      width: 169px;
+      height: 27px;
+      margin-bottom: 40px;
+    }
+
+    .content_case_container {
+      width: 90%;
+      margin: 0 auto;
+
+      .web {
+        display: none;
+      }
+      .wap {
+        display: block;
+      }
+      .content_case_wrapper {
+        padding-bottom: 30px;
+        .content_case_item {
+          margin-bottom: 30px !important;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .content_case_item_more {
+            width: 100%;
+          }
         }
       }
     }
