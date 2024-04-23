@@ -1,66 +1,146 @@
-.about_banner {
-  width: 100%;
-  text-align: center;
-  padding-top: 140px;
-  position: relative;
-  box-sizing: border-box;
-  .about_banner_video {
+@media screen and (orientation: landscape) {
+  .about_banner {
     width: 100%;
-    margin: 0 -100%;
-    display: inline-block !important;
-    vertical-align: bottom;
-  }
+    text-align: center;
+    padding-top: 140px;
+    position: relative;
+    box-sizing: border-box;
 
-  .about_banner_mark {
-    position: absolute;
-    top: 140px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    .about_banner_mark_img {
-      height: 68px;
-      width: 68px;
-    }
-    .about_banner_mark_text {
+    .about_banner_video {
       width: 100%;
-      max-width: 500px;
-      font-family: PingFangSC, PingFang SC;
-      text-align: center;
-      font-style: normal;
-      color: #ffffff;
-      div {
-        font-weight: 500;
-        font-size: 55px;
-        line-height: 72px;
+      margin: 0 -100%;
+      display: inline-block !important;
+      vertical-align: bottom;
+    }
+
+    .about_banner_mark {
+      position: absolute;
+      top: 140px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      .about_banner_mark_img {
+        height: 68px;
+        width: 68px;
       }
-      img {
+
+      .about_banner_mark_text {
         width: 100%;
         max-width: 500px;
-        margin: 30px 0;
-      }
-      p {
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 47px;
+        font-family: PingFangSC, PingFang SC;
+        text-align: center;
+        font-style: normal;
+        color: #ffffff;
+
+        div {
+          font-weight: 500;
+          font-size: 55px;
+          line-height: 72px;
+        }
+
+        img {
+          width: 100%;
+          max-width: 500px;
+          margin: 30px 0;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 47px;
+        }
       }
     }
   }
+  :global(.slick-dots button) {
+    background: #dfe4ed !important;
+    bottom: 30px;
+  }
+
+  :global(.slick-dots li) {
+    width: 50px !important;
+  }
+
+  :global(.slick-active button) {
+    background: #fff !important;
+  }
 }
 
-:global(.slick-dots button) {
-  background: #dfe4ed !important;
-  bottom: 30px;
-}
+@media screen and (orientation: portrait) {
+  .about_banner {
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    padding-top: 140px;
+    position: relative;
+    box-sizing: border-box;
 
-:global(.slick-dots li) {
-  width: 50px !important;
-}
+    .about_banner_video {
+      width: 100%;
+      display: inline-block !important;
+      vertical-align: bottom;
+    }
 
-:global(.slick-active button) {
-  background: #fff !important;
+    .about_banner_mark {
+      position: absolute;
+      top: 140px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      .about_banner_mark_img {
+        height: 68px;
+        width: 68px;
+      }
+
+      .about_banner_mark_text {
+        width: 100%;
+        max-width: 500px;
+        font-family: PingFangSC, PingFang SC;
+        text-align: center;
+        font-style: normal;
+        color: #ffffff;
+
+        div {
+          font-weight: 500;
+          font-size: 55px;
+          line-height: 72px;
+        }
+
+        img {
+          width: 100%;
+          max-width: 500px;
+          margin: 30px 0;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 47px;
+        }
+      }
+    }
+  }
+
+  :global(.slick-dots button) {
+    background: #dfe4ed !important;
+    bottom: 30px;
+  }
+
+  :global(.slick-dots li) {
+    width: 50px !important;
+  }
+
+  :global(.slick-active button) {
+    background: #fff !important;
+  }
 }

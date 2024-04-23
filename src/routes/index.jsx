@@ -2,12 +2,13 @@ import { Navigate } from 'react-router-dom';
 import { lazyLoad } from './LazyLoad';
 import { lazy } from 'react';
 import Error404 from '@/pages/404';
+import Home from '@/pages/Home/index';
 
 export default [
   {
     title: '首页',
     path: '/home',
-    element: lazyLoad(lazy(() => import('@/pages/home'))),
+    element: <Home />,
   },
   // {
   //   title: "关于",

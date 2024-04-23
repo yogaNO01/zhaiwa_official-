@@ -24,7 +24,7 @@ function BasicLayout() {
         theme={{ token: { colorPrimary: '#0B58AA' } }}>
         <App>
           {elements}
-          <Footer />
+          {/* <Footer /> */}
           <BackTop />
         </App>
       </ConfigProvider>

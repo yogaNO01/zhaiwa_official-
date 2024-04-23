@@ -1,10 +1,27 @@
-.banner {
-  width: 100%;
-  text-align: center;
-  .banner_img {
+@media screen and (orientation: landscape) {
+  .banner {
     width: 100%;
-    height: calc(100vh - 70px);
-    margin: 0 -100%;
-    display: inline-block !important;
+    text-align: center;
+
+    .banner_img {
+      width: 100%;
+      height: calc(100vh - 70px);
+      margin: 0 -100%;
+      display: inline-block !important;
+      background: url('@/assets/images/banner/banner.png') no-repeat center center / 100% 100%;
+    }
   }
 }
+
+@media screen and (orientation: portrait) {
+  .banner {
+    width: 100vw;
+
+    .banner_img {
+      width: 100vw;
+      height: 195vw;
+      display: inline-block !important;
+      background: url('@/assets/images/banner/banner_mob.png') no-repeat center center / 100% 100%;
+    }
+  }
+  }

@@ -4,25 +4,20 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.footer_banner}>
-        <img
-          src={
-            new URL('@/assets/images/footer/banner.png', import.meta.url).href
-          }
-          alt="banner"
-        />
+        <image alt="banner" className={styles.img} />
 
         <div className={styles.footer_banner_wrapper}>
           <div className={styles.footer_banner_title}>
             居长寿之乡，做极致好水！
           </div>
           <div className={styles.footer_banner_sub_title}>
-            {' '}
-            寨娃山泉感谢您的关注！{' '}
+            {" "}
+            寨娃山泉感谢您的关注！{" "}
           </div>
         </div>
       </div>
 
-      <div className={styles.footer_wrapper}>
+      {/* <div className={styles.footer_wrapper}>
         <div className={styles.footer_box}>
           <div className={styles.footer_box_top}>寨娃矿泉水</div>
           <div className={styles.footer_box_wrapper}>
@@ -49,14 +44,14 @@ function Footer() {
             <div className={styles.footer_box_wrapper_qrcode}>
               <img
                 src={
-                  new URL('@/assets/images/footer/qrcode1.png', import.meta.url)
+                  new URL("@/assets/images/footer/qrcode1.png", import.meta.url)
                     .href
                 }
                 alt="qrcode"
               />
               <img
                 src={
-                  new URL('@/assets/images/footer/qrcode2.png', import.meta.url)
+                  new URL("@/assets/images/footer/qrcode2.png", import.meta.url)
                 }
                 alt="qrcode"
               />
@@ -67,14 +62,15 @@ function Footer() {
               <a
                 href="https://beian.miit.gov.cn/#/Integrated/recordQuery"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 沪ICP备2023031436号-1
               </a>
               技术支持：成都深眯科技
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
